@@ -841,4 +841,49 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
+    .social-links{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a{
+    color: var(--color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+  
+    transition: .3s ease;
+    text-decoration: none;
+}
+
+.social-links a:hover{
+    background-color: var(--color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 30px var(--color);
+}
+/* Touch effect للموبايل والتابلت */
+@media (hover: none) {
+    .social-links a:active,
+    .social-links a:focus {
+        background-color: var(--color);
+        color: white;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 30px var(--color);
+    }
+}
+
+
+.social-links a::before,
+.social-links a::after{
+    content: none;
+}
+
 }
