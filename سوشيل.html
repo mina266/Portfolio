@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Cards</title>
+<style>
+body{
+    margin:0;
+    padding:20px;
+    background:#f8f6f6;
+    font-family:Arial, sans-serif;
+}
+
+/* جريد الصور */
+.container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+}
+
+/* الكارت */
+.card{
+    position: relative;
+    width:100%;
+    height:250px;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    transition:0.3s ease;
+    background:#f0eeee;
+    cursor:pointer;
+}
+
+/* الصورة */
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.3s ease;
+}
+
+/* النص الشفاف */
+.card .overlay-text{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:40px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    opacity:0;
+    transition:0.3s ease;
+}
+
+/* تأثير الهوفر */
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.card:hover .overlay-text{
+    opacity:1;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://mina266.github.io/Portfolio/" target="_blank" class="card">
+        <img src="Capture.PNG" alt="">
+        <div class="overlay-text">Portfolio</div>
+    </a>
+
+    <a href="https://mina33.infinityfree.me/" target="_blank" class="card">
+        <img src="2.PNG" alt="">
+        <div class="overlay-text">Marketing</div>
+    </a>
+
+    <a href="https://mina266.github.io/-/" target="_blank" class="card">
+        <img src="3.PNG" alt="">
+        <div class="overlay-text">Church</div>
+    </a>
+
+   
+
+</div>
+
+</body>
+</html>
